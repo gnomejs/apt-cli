@@ -22,8 +22,9 @@ has the same basic usage as the `Command` and `ShellCommand` class.
 ```typescript
 import { apt } from "@gnome/apt-cli";
  
-const cmd = apt("--version");
-consoleL
+const result = await apt("--version");
+console.log(result.code);
+console.log(result.text());
 
 ```
 
